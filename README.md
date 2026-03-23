@@ -48,3 +48,4 @@ Proprietary - All rights reserved
 
 Author
 nonseibello
+(The file in the repo is the basic version , for the most recent one , use the one-liner or run install.sh)
