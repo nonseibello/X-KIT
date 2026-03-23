@@ -55,3 +55,4 @@ creds to:
 - Scapy Team - For the packet manipulation library
 - Nmap Project - For advanced scanning capabilities
 - PyShark Team - For Wireshark integration
+And also , im going to soon add many more functionalities!
