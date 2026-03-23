@@ -47,5 +47,10 @@ License
 Proprietary - All rights reserved
 
 Author
-nonseibello
-###(The file in the repo is the basic version , for the most recent one , use the one-liner or you can neither run the install.sh and even better if you paste the code in the terminal)
+alex
+tiktok:
+@real_cybersecurity12
+creds to:
+- Scapy Team - For the packet manipulation library
+- Nmap Project - For advanced scanning capabilities
+- PyShark Team - For Wireshark integration
