@@ -45,7 +45,8 @@ Dependencies (nmap, tshark) installed automatically
 
 License
 Proprietary - All rights reserved
-
+link to tar.gz file:
+https://github.com/nonseibello/X-KIT/releases/download/v1.0/xkit.tar.gz
 Author
 alex
 tiktok:
