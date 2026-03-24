@@ -14,6 +14,16 @@ bash
 tar -xzf xkit.tar.gz
 sudo cp xkit /usr/local/bin/
 sudo chmod +x /usr/local/bin/xkit
+## Compatibility
+
+### For older distributions (Ubuntu 20.04, Debian 11, CentOS 7, etc.)
+
+If you get a `GLIBC` error when running X-KIT, install the legacy version:
+
+```bash
+wget -O install_legacy.sh https://raw.githubusercontent.com/nonseibello/X-KIT/main/install_legacy.sh
+chmod +x install_legacy.sh
+sudo ./install_legacy.sh
 Features
 Host discovery (4 modes: stealth, classic, verbose, aggressive)
 
