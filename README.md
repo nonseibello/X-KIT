@@ -8,7 +8,7 @@ Complete network security toolkit for host discovery, port scanning, packet anal
 ```bash
 wget -O install.sh https://raw.githubusercontent.com/nonseibello/X-KIT/main/install.sh && chmod +x install.sh && sudo ./install.sh
 Manual
-Download the executable from Releases
+Download the tar.gz executable from Releases
 
 bash
 tar -xzf xkit.tar.gz
