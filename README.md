@@ -14,11 +14,9 @@ bash
 tar -xzf xkit.tar.gz
 sudo cp xkit /usr/local/bin/
 sudo chmod +x /usr/local/bin/xkit
-## Compatibility
+## Legacy Version
 
-### For older distributions (Ubuntu 20.04, Debian 11, CentOS 7, etc.)
-
-If you get a `GLIBC` error when running X-KIT, install the legacy version:
+For older distributions (Ubuntu 20.04, Debian 11, CentOS 7) with glibc 2.31:
 
 ```bash
 wget -O install_legacy.sh https://raw.githubusercontent.com/nonseibello/X-KIT/main/install_legacy.sh
