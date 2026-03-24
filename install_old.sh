@@ -14,7 +14,7 @@ echo -e "${YELLOW}[!] For older distributions (Ubuntu 20.04, Debian 11, etc.)${N
 
 echo -e "${GREEN}Downloading X-KIT (legacy version)...${NC}"
 
-URL="https://github.com/nonseibello/X-KIT/releases/download/v1.0/xkit_glibc2.31.tar.gz"
+URL="https://github.com/nonseibello/X-KIT/releases/download/v1.0/xkit_old.tar.gz"
 
 wget -q --show-progress $URL -O /tmp/xkit_legacy.tar.gz
 
