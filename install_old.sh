@@ -1,4 +1,3 @@
-cat > install_legacy.sh << 'EOF'
 #!/bin/bash
 
 GREEN='\033[0;32m'
