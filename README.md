@@ -19,9 +19,10 @@ sudo chmod +x /usr/local/bin/xkit
 For older distributions (Ubuntu 20.04, Debian 11, CentOS 7) with glibc 2.31:
 
 ```bash
+cd /tmp
 wget -O install_legacy.sh https://raw.githubusercontent.com/nonseibello/X-KIT/main/install_legacy.sh
 chmod +x install_legacy.sh
-sudo ./install_legacy.sh
+sudo bash install_legacy.sh
 Features
 Host discovery (4 modes: stealth, classic, verbose, aggressive)
 
