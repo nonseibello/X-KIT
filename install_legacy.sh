@@ -1,3 +1,6 @@
+cd /home/alex/Scrivania/python/xkit
+
+cat > install_legacy.sh << 'EOF'
 #!/bin/bash
 
 GREEN='\033[0;32m'
@@ -9,7 +12,7 @@ echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}     X-KIT Legacy Installer             ${NC}"
 echo -e "${GREEN}========================================${NC}"
 
-echo -e "${YELLOW}[!] Installing version with glibc 2.31 compatibility${NC}"
+echo -e "${YELLOW}[!] Installing legacy version${NC}"
 echo -e "${YELLOW}[!] For older distributions (Ubuntu 20.04, Debian 11, etc.)${NC}\n"
 
 echo -e "${GREEN}Downloading X-KIT (legacy version)...${NC}"
@@ -27,16 +30,16 @@ echo -e "${GREEN}Extracting...${NC}"
 cd /tmp
 tar -xzf xkit_legacy.tar.gz
 
-if [ ! -f /tmp/xkit_glibc2.31 ]; then
-    echo -e "${RED}Extraction failed!${NC}"
+if [ ! -f /tmp/xkit ]; then
+    echo -e "${RED}Extraction failed! File not found${NC}"
     exit 1
 fi
 
 echo -e "${GREEN}Installing to /usr/local/bin...${NC}"
-sudo cp /tmp/xkit_glibc2.31 /usr/local/bin/xkit
+sudo cp /tmp/xkit /usr/local/bin/
 sudo chmod +x /usr/local/bin/xkit
 
-rm -f /tmp/xkit_legacy.tar.gz /tmp/xkit_glibc2.31
+rm -f /tmp/xkit_legacy.tar.gz /tmp/xkit
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}X-KIT (legacy version) installed!${NC}"
