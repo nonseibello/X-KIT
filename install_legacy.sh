@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 GREEN='\033[0;32m'
@@ -28,16 +27,22 @@ echo -e "${GREEN}Extracting...${NC}"
 cd /tmp
 tar -xzf xkit_legacy.tar.gz
 
-if [ ! -f /tmp/xkit ]; then
-    echo -e "${RED}Extraction failed! File not found${NC}"
+# Cerca il file estratto (potrebbe chiamarsi xkit o xkit_old)
+if [ -f /tmp/xkit ]; then
+    EXECUTABLE="/tmp/xkit"
+elif [ -f /tmp/xkit_old ]; then
+    EXECUTABLE="/tmp/xkit_old"
+else
+    echo -e "${RED}Extraction failed! No executable found${NC}"
+    ls -la /tmp/xkit* 2>/dev/null
     exit 1
 fi
 
 echo -e "${GREEN}Installing to /usr/local/bin...${NC}"
-sudo cp /tmp/xkit /usr/local/bin/
+sudo cp $EXECUTABLE /usr/local/bin/xkit
 sudo chmod +x /usr/local/bin/xkit
 
-rm -f /tmp/xkit_legacy.tar.gz /tmp/xkit
+rm -f /tmp/xkit_legacy.tar.gz /tmp/xkit /tmp/xkit_old 2>/dev/null
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}X-KIT (legacy version) installed!${NC}"
