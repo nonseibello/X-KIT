@@ -16,7 +16,7 @@ echo -e "${GREEN}Downloading X-KIT (legacy version)...${NC}"
 
 URL="https://github.com/nonseibello/X-KIT/releases/download/v1.0/xkit_old.tar.gz"
 
-wget -q --show-progress $URL -O /tmp/xkit_legacy.tar.gz
+wget -q --show-progress $URL -O /tmp/xkit_old.tar.gz
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}Download failed!${NC}"
@@ -25,24 +25,19 @@ fi
 
 echo -e "${GREEN}Extracting...${NC}"
 cd /tmp
-tar -xzf xkit_legacy.tar.gz
+tar -xzf xkit_old.tar.gz
 
-# Cerca il file estratto (potrebbe chiamarsi xkit o xkit_old)
-if [ -f /tmp/xkit ]; then
-    EXECUTABLE="/tmp/xkit"
-elif [ -f /tmp/xkit_old ]; then
-    EXECUTABLE="/tmp/xkit_old"
-else
-    echo -e "${RED}Extraction failed! No executable found${NC}"
+if [ ! -f /tmp/xkit_old ]; then
+    echo -e "${RED}Extraction failed!${NC}"
     ls -la /tmp/xkit* 2>/dev/null
     exit 1
 fi
 
 echo -e "${GREEN}Installing to /usr/local/bin...${NC}"
-sudo cp $EXECUTABLE /usr/local/bin/xkit
+sudo cp /tmp/xkit_old /usr/local/bin/xkit
 sudo chmod +x /usr/local/bin/xkit
 
-rm -f /tmp/xkit_legacy.tar.gz /tmp/xkit /tmp/xkit_old 2>/dev/null
+rm -f /tmp/xkit_old.tar.gz /tmp/xkit_old
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}X-KIT (legacy version) installed!${NC}"
@@ -51,3 +46,4 @@ echo -e "${GREEN}========================================${NC}"
 EOF
 
 chmod +x install_legacy.sh
+
