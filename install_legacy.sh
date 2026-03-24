@@ -43,7 +43,6 @@ echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}X-KIT (legacy version) installed!${NC}"
 echo -e "${GREEN}Run with: sudo xkit${NC}"
 echo -e "${GREEN}========================================${NC}"
-EOF
 
 chmod +x install_legacy.sh
 
