@@ -16,7 +16,7 @@ sudo cp xkit /usr/local/bin/
 sudo chmod +x /usr/local/bin/xkit
 ## Legacy Version
 
-For older distributions (Ubuntu 20.04, Debian 11, CentOS 7) with glibc 2.31:
+If you get a gblic error , use this installer instead!
 
 ```bash
 cd /tmp
