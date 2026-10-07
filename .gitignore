@@ -1,4 +1,3 @@
-*
-!README.md
-!xkit
-!.gitignore
+modes.py
+nameforger.py
+main.py
