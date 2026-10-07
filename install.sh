@@ -23,11 +23,6 @@ echo -e "${GREEN}Extracting...${NC}"
 cd /tmp
 tar -xzf xkit.tar.gz
 
-if [ ! -f /tmp/xkit ]; then
-    echo -e "${RED}Extraction failed!${NC}"
-    exit 1
-fi
-
 echo -e "${GREEN}Installing to /usr/local/bin...${NC}"
 sudo cp /tmp/xkit /usr/local/bin/
 sudo chmod +x /usr/local/bin/xkit
