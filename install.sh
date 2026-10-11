@@ -10,7 +10,7 @@ echo -e "${GREEN}========================================${NC}"
 
 echo -e "${GREEN}Downloading X-KIT...${NC}"
 
-URL="https://github.com/nonseibello/X-KIT/releases/download/v1.1/xkit.tar.gz"
+URL="https://github.com/nonseibello/X-KIT/releases/download/v1.2/xkit.tar.gz"
 
 wget -q --show-progress $URL -O /tmp/xkit.tar.gz
 
@@ -23,11 +23,16 @@ echo -e "${GREEN}Extracting...${NC}"
 cd /tmp
 tar -xzf xkit.tar.gz
 
-echo -e "${GREEN}Installing to /usr/local/bin...${NC}"
+echo -e "${GREEN}Installing X-KIT to /usr/local/bin...${NC}"
 sudo cp /tmp/xkit /usr/local/bin/
 sudo chmod +x /usr/local/bin/xkit
 
-rm -f /tmp/xkit.tar.gz /tmp/xkit
+if [ -f /tmp/requirements.txt ]; then
+    echo -e "${GREEN}Installing Python dependencies...${NC}"
+    sudo pip install -r /tmp/requirements.txt 2>/dev/null || pip install --user -r /tmp/requirements.txt
+fi
+
+rm -f /tmp/xkit.tar.gz /tmp/xkit /tmp/requirements.txt
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}X-KIT installed! Run with: sudo xkit${NC}"
