@@ -85,7 +85,8 @@ You agree to indemnify, defend, and hold harmless the author and any contributor
 **If you do not agree with any part of this disclaimer, do not download, install, or use X-KIT.**
 
 ---
-
+# ATTTENTION
+the MITM tool is easly findable and NOT stealthy
 ## Features
 
 - Host Discovery (4 modes: stealth, classic, verbose, aggressive)
